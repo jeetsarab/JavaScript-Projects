@@ -93,6 +93,7 @@ function checkWinConditions() {
     else if (arrayIncludes('6O', '4O', '2O')) { drawWinLine(100, 508, 510, 90) }
     else if (arrayIncludes('0O', '4O', '8O')) { drawWinLine(100, 100, 520, 520) }
     else if (slectedSquares.length>=9){
+       gameOver = true;
        new Audio('./media/tie.mp3').play();
 
        setTimeout(function(){resetGame();},500 )
